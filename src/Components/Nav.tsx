@@ -133,7 +133,7 @@ function Nav({ userImg, isLogInOpen, isLogin, handleLogin, handleLoginModal, han
       });
       setIsLogin(true);
     }
-  }, []);
+  }, [handleChangeMenuIcon]);
 
   //태그를 선택할때 tag state 업데이트가 됨.
   const option = (e: React.ChangeEvent<HTMLSelectElement> & React.MouseEvent<HTMLSelectElement>) => {
@@ -143,7 +143,7 @@ function Nav({ userImg, isLogInOpen, isLogin, handleLogin, handleLoginModal, han
   return (
     <NavBar>
       <LeftBox>
-        <Logo onClick={(() => history.push('/'))}>MDN +</Logo>
+        <Logo onClick={() => history.push("/")}>MDN +</Logo>
         <SearchBar>
           <Search onKeyPress={handleKeyPress} onChange={handleWritingState} />
           <SearchIcon onClick={handleIconClick} src={search}></SearchIcon>

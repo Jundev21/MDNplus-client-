@@ -17,7 +17,7 @@ const NameSettingPage = () => {
     axios
       .post("http://localhost:8080/oauth/nick", { nickName: nickname }, { withCredentials: true })
       .then((res) => {
-        history.push("/");
+        history.push("/Wiki");
       })
       .catch((err) => console.log("안됨"));
   };
